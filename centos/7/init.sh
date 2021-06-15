@@ -1,5 +1,5 @@
 yum install -y wget epel-release
-yum install -y nmap htop vim openssh-server
+yum install -y nmap htop vim openssh-server dnf dnf-automatic
 systemctl enable --now sshd
 echo "export TERM=xterm" >> /etc/bashrc
 useradd -m fishbone222
