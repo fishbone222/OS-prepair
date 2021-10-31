@@ -17,4 +17,5 @@ dnf upgrade -y
 
 cd /tmp/
 curl https://static.tp-link.com/upload/software/2021/202110/20211011/Omada_SDN_Controller_v4.4.6_Linux_x64.tar.gz | tar xvz
+reset
 ./install.sh
