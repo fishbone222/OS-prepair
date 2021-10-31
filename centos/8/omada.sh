@@ -10,7 +10,7 @@ rpm -i http://repo.iotti.biz/CentOS/8/noarch/lux-release-8-1.noarch.rpm
 dnf install -y apache-commons-daemon-jsvc
 
 echo "%_netsharedpath /sys:/proc" >> /etc/rpm/macros.dist
-dnf install -y nmap openssh-server vim java-1.8.0-openjdk
+dnf install -y nmap openssh-server vim java-1.8.0-openjdk wget tar
 dnf upgrade -y
 
 cd /tmp/
