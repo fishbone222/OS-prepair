@@ -11,6 +11,7 @@ dnf install -y apache-commons-daemon-jsvc
 
 echo "%_netsharedpath /sys:/proc" >> /etc/rpm/macros.dist
 dnf install -y nmap openssh-server vim java-1.8.0-openjdk wget tar
+systemctl enable --now sshd
 dnf upgrade -y
 
 cd /tmp/
