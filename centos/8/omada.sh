@@ -14,5 +14,5 @@ dnf install -y nmap openssh-server vim java-1.8.0-openjdk
 dnf upgrade -y
 
 cd /tmp/
-wget https://static.tp-link.com/upload/software/2021/202110/20211011/Omada_SDN_Controller_v4.4.6_Linux_x64.tar.gz
+curl https://static.tp-link.com/upload/software/2021/202110/20211011/Omada_SDN_Controller_v4.4.6_Linux_x64.tar.gz | tar xaf -
 ./install.sh
