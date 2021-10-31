@@ -4,7 +4,7 @@ baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.6/x86_64/
 gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc' > /etc/yum.repos.d/mongodb-org.repo
-dnf install mongodb-org-server
+dnf install mongodb-org-server -y
 
 rpm -i http://repo.iotti.biz/CentOS/8/noarch/lux-release-8-1.noarch.rpm
 dnf install -y apache-commons-daemon-jsvc
