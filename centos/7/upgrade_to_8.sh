@@ -3,7 +3,7 @@ yum install epel-release -y
 yum install dnf -y
 dnf -y remove yum yum-metadata-parser
 dnf install yum-utils -y
-dnf install rpmconf -y
+dnf install rpmconf epel-release -y
 rpmconf -a
 package-cleanup --leaves
 package-cleanup --orphans
