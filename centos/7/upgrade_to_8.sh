@@ -15,6 +15,6 @@ rpm -e `rpm -q kernel`
 rpm -e --nodeps sysvinit-tools
 dnf -y --releasever=8 --allowerasing --setopt=deltarpm=false distro-sync
 dnf -y install kernel-core
-dnf -y groupupdate "Core" "Minimal Install"
+dnf -y groupupdate "Core" "Minimal Install" --allow-erasing
 curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/centos/8/dnf_auto.sh | sh -
 echo "reboot please"
