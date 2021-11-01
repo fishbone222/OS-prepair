@@ -6,7 +6,7 @@ dnf install rpmconf epel-release -y
 yes|rpmconf -a
 package-cleanup --leaves
 package-cleanup --orphans
-dnf update --refresh
+dnf update
 dnf -y remove yum yum-metadata-parser
 rm -Rf /etc/yum
 dnf upgrade -y https://github.com/fishbone222/OS-prepair/raw/main/centos/7/legacy-rpm/{centos-release-8.1-1.1911.0.8.el8.x86_64.rpm,centos-gpg-keys-8.1-1.1911.0.8.el8.noarch.rpm,centos-repos-8.1-1.1911.0.8.el8.x86_64.rpm}
@@ -15,6 +15,7 @@ dnf -y upgrade https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarc
 dnf clean all
 rpm -e `rpm -q kernel`
 rpm -e --nodeps sysvinit-tools
+dnf uprgade-minimal --refresh
 dnf -y --releasever=8 --allowerasing --setopt=deltarpm=false distro-sync
 dnf -y install kernel-core
 dnf -y groupupdate "Core" "Minimal Install" --allowerasing
