@@ -6,7 +6,7 @@ dnf install rpmconf epel-release -y
 yes|rpmconf -a
 package-cleanup --leaves
 package-cleanup --orphans
-dnf update
+dnf update -y
 dnf -y remove yum yum-metadata-parser
 rm -Rf /etc/yum
 dnf upgrade -y https://github.com/fishbone222/OS-prepair/raw/main/centos/7/legacy-rpm/{centos-release-8.1-1.1911.0.8.el8.x86_64.rpm,centos-gpg-keys-8.1-1.1911.0.8.el8.noarch.rpm,centos-repos-8.1-1.1911.0.8.el8.x86_64.rpm}
