@@ -7,6 +7,11 @@ yes|rpmconf -a
 package-cleanup --leaves
 package-cleanup --orphans
 dnf update -y
+FREE=`df -k --output=avail / | tail -n1`
+if [[ $FREE -lt 524288 ]]; then
+     echo "less than 500MB free on /"
+     exit
+fi;
 dnf -y remove yum yum-metadata-parser
 rm -Rf /etc/yum
 dnf upgrade -y https://github.com/fishbone222/OS-prepair/raw/main/centos/7/legacy-rpm/{centos-release-8.1-1.1911.0.8.el8.x86_64.rpm,centos-gpg-keys-8.1-1.1911.0.8.el8.noarch.rpm,centos-repos-8.1-1.1911.0.8.el8.x86_64.rpm}
