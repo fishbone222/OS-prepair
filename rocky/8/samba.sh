@@ -11,6 +11,7 @@ tar xaf samba*
 cd samba*
 ./configure
 make -j 4
+dnf module enable php:7.4 -y
 firewall-cmd --add-port={389/udp,135/tcp,135/udp,138/udp,138/tcp,137/tcp,137/udp,139/udp,139/tcp,445/tcp,445/udp,3268/udp,3268/tcp,3269/tcp,3269/udp,49152/tcp,53/udp,53/tcp,464/tcp,464/udp}
 wget http://prdownloads.sourceforge.net/webadmin/webmin-1.991-1.noarch.rpm
 rpm -U webmin-1.991-1.noarch.rpm
