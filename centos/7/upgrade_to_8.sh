@@ -20,7 +20,7 @@ dnf -y upgrade https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarc
 dnf clean all
 rpm -e `rpm -q kernel`
 rpm -e --nodeps sysvinit-tools
-dnf upgrade-minimal --refresh
+dnf upgrade-minimal --refresh -y
 dnf -y --releasever=8 --allowerasing --setopt=deltarpm=false distro-sync
 dnf -y install kernel-core
 dnf -y groupupdate "Core" "Minimal Install" --allowerasing
