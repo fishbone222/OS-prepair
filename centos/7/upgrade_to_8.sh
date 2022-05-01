@@ -14,6 +14,25 @@ if [[ $FREE -lt 524288 ]]; then
 fi;
 dnf -y remove yum yum-metadata-parser
 rm -Rf /etc/yum
+cd /etc/yum.repos.d
+mkdir backups
+mv CentOS-* backups
+tee CentOS-Linux-BaseOS.repo<<EOM
+[baseos]
+name=CentOS Linux \$releasever - BaseOS
+baseurl=http://vault.centos.org/8.5.2111/BaseOS/\$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+EOM
+tee CentOS-Linux-AppStream.repo<<EOM
+[appstream]
+name=CentOS Linux \$releasever - AppStream
+baseurl=http://vault.centos.org/8.5.2111/AppStream/\$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+EOM
 dnf upgrade -y https://github.com/fishbone222/OS-prepair/raw/main/centos/7/legacy-rpm/{centos-release-8.1-1.1911.0.8.el8.x86_64.rpm,centos-gpg-keys-8.1-1.1911.0.8.el8.noarch.rpm,centos-repos-8.1-1.1911.0.8.el8.x86_64.rpm}
 #dnf upgrade -y http://mirror.centos.org/centos/8/BaseOS/x86_64/os/Packages/{centos-linux-repos-8-2.el8.noarch.rpm,centos-linux-release-8.4-1.2105.el8.noarch.rpm,centos-gpg-keys-8-2.el8.noarch.rpm}
 dnf -y upgrade https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
