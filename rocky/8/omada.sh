@@ -1,5 +1,5 @@
 echo "curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/centos/8/omada.sh | sh -"
-https://raw.githubusercontent.com/fishbone222/OS-prepair/main/rocky/8/defaults.sh | bash
+curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/rocky/8/defaults.sh | bash
 echo '[mongodb-org]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.6/x86_64/
