@@ -16,6 +16,9 @@ dnf install -y nmap openssh-server vim java-1.8.0-openjdk wget tar
 systemctl enable --now sshd
 dnf upgrade -y
 
+dnf autoremove -y
+dnf clean all
+
 cd /tmp/
 curl https://static.tp-link.com/upload/software/2022/202203/20220322/Omada_SDN_Controller_v5.1.7_Linux_x64.tar.gz | tar xvz
 cd Omada*
