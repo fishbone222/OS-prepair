@@ -1,3 +1,5 @@
+curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/rocky/8/defaults.sh | bash
+curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/rocky/8/dnf-auto.sh | bash
 sed -i s/^SELINUX=.*$/SELINUX=disabled/ /etc/selinux/config
 dnf install epel-release -y
 rpm -ivh http://repo.okay.com.mx/centos/8/x86_64/release/okay-release-1-5.el8.noarch.rpm?
