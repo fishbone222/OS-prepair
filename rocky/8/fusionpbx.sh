@@ -5,7 +5,9 @@ case $sql in
   m|M|2) sql=mysql;;
   *)  sql=mysql;;
 esac
+echo ""
 echo "You selected: $sql"
+echo ""
 
 bash <(curl -s https://raw.githubusercontent.com/fishbone222/OS-prepair/main/rocky/8/defaults.sh)
 bash <(curl -s https://raw.githubusercontent.com/fishbone222/OS-prepair/main/rocky/8/dnf_auto.sh)
