@@ -1,4 +1,5 @@
-read -n1 -p "Postgresql(1) or mysql(2) ?" sql
+#!/bin/bash
+read -n1 -p "Postgresql[1] or mysql[2] ?" sql
 case $sql in
   p|P|1) sql=pgsql;;
   m|M|2) sql=mysql;;
