@@ -18,6 +18,7 @@ if [ "$sql" == "pgsql" ]; then
   dnf module enable postgresql:13 -y
   dnf install postgresql-server php-pgsql -y
   postgresql-setup --initdb
+  sed -i s/ident/md5/ /var/lib/pgsql/data/pg_hba.conf
   systemctl enable --now postgresql
 fi
 systemctl stop firewalld
