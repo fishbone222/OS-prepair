@@ -12,7 +12,7 @@ bash <(curl -s https://raw.githubusercontent.com/fishbone222/OS-prepair/main/roc
 sed -i s/^SELINUX=.*$/SELINUX=disabled/ /etc/selinux/config
 dnf install epel-release -y
 rpm -ivh http://repo.okay.com.mx/centos/8/x86_64/release/okay-release-1-5.el8.noarch.rpm?
-if [[ $sql=="pgsql" ]] 
+if [[ $sql == "pgsql" ]] 
 then
   dnf module enable postgresql:13 -y
   dnf install postgresql-server php-pgsql -y
@@ -26,7 +26,7 @@ systemctl enable --now httpd
 systemctl enable --now php-fpm
 systemctl enable --now freeswitch
 systemctl enable --now memcached
-if [[ $sql=="mysql" ]] 
+if [[ $sql == "mysql" ]] 
 then
   systemctl enable --now mariadb
 fi
