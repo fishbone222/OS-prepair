@@ -24,7 +24,7 @@ fi
 systemctl stop firewalld
 dnf -y  install nginx fusionpbx-all fusionpbx-fail2ban-rules freeswitch-fail2ban-rules fail2ban-server fail2ban-systemd
 cat /usr/share/doc/fusionpbx-fail2ban-rules/README.fusionpbx-fail2ban-rules.txt /usr/share/doc/freeswitch-fail2ban-rules/README.freeswitch-fail2ban-rules.txt > /etc/fail2ban/jail.local
-systemctl enable --now httpd
+systemctl enable --now nginx
 systemctl enable --now php-fpm
 systemctl enable --now freeswitch
 systemctl enable --now memcached
