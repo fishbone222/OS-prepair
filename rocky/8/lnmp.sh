@@ -1,7 +1,6 @@
+dnf module enable php:8.0
 dnf install nginx mariadb-server mod_ssl -y
-dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
-dnf module reset php -y
-dnf module enable php:remi-8.0 -y
+
 dnf install php php-fpm php-gd php-mysqlnd php-mbstring -y
 
 sed -i 's/^user.*=*$/user = nginx/' /etc/php-fpm.d/www.conf
