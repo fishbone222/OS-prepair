@@ -1,5 +1,5 @@
-dnf module reset php
-dnf module enable php:8.0
+dnf module reset php -y
+dnf module enable php:8.0 -y
 dnf install nginx mariadb-server mod_ssl -y
 
 dnf install php php-fpm php-gd php-mysqlnd php-mbstring -y
