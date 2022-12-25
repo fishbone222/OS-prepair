@@ -3,4 +3,6 @@ dnf install git -y
 dnf clean all
 cd /tmp/
 rpm --import https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux
-curl https://raw.githubusercontent.com/AlmaLinux/almalinux-deploy/master/almalinux-deploy.sh | bash
+cd /tmp
+wget https://raw.githubusercontent.com/AlmaLinux/almalinux-deploy/master/almalinux-deploy.sh
+bash almalinux-deploy.sh
