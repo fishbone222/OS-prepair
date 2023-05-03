@@ -1,11 +1,13 @@
 echo "curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/el/9/omada.sh | sh -"
+echo "This won't work until Omada accepts MongoDB 6.0 as 4.4 and 5.0 are not working on EL9"
+exit 7
 curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/el/9/defaults.sh | bash
 echo '[mongodb-org]
 name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releaseverServer/mongodb-org/4.4/x86_64/
+baseurl=https://repo.mongodb.org/yum/redhat/$releaseverServer/mongodb-org/6.0/x86_64/
 gpgcheck=1
 enabled=1
-gpgkey=https://www.mongodb.org/static/pgp/server-4.4.asc' > /etc/yum.repos.d/mongodb-org.repo
+gpgkey=https://www.mongodb.org/static/pgp/server-6.0.asc' > /etc/yum.repos.d/mongodb-org.repo
 dnf install mongodb-org-server -y
 
 rpm -i https://repo.almalinux.org/development/almalinux/9/devel/x86_64/Packages/apache-commons-daemon-jsvc-1.2.4-1.el9.x86_64.rpm
