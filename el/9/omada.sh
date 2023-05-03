@@ -8,7 +8,7 @@ enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.4.asc' > /etc/yum.repos.d/mongodb-org.repo
 dnf install mongodb-org-server -y
 
-#rpm -i http://repo.iotti.biz/CentOS/8/noarch/lux-release-8-1.noarch.rpm
+rpm -i https://repo.almalinux.org/development/almalinux/9/devel/x86_64/Packages/apache-commons-daemon-jsvc-1.2.4-1.el9.x86_64.rpm
 #dnf install -y apache-commons-daemon-jsvc
 
 echo "%_netsharedpath /sys:/proc" >> /etc/rpm/macros.dist
