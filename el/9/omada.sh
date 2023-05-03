@@ -28,6 +28,6 @@ cd Omada*
 echo 'server{
 	listen 80;
 	server_name _;
-	return 301 https://:8043;
+	return 301 https://$host:8043/$request_uri;
 }'>>/etc/nginx/conf.d/omada.conf
 systemctl enable --now nginx
