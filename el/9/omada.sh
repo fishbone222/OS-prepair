@@ -12,7 +12,7 @@ rpm -i https://repo.almalinux.org/development/almalinux/9/devel/x86_64/Packages/
 #dnf install -y apache-commons-daemon-jsvc
 
 echo "%_netsharedpath /sys:/proc" >> /etc/rpm/macros.dist
-dnf install -y nmap openssh-server vim java-1.8.0-openjdk-headless wget tar
+dnf install -y nmap openssh-server vim java-1.8.0-openjdk-headless wget tar nginx
 systemctl enable --now sshd
 dnf upgrade -y
 
@@ -23,3 +23,9 @@ cd /tmp/
 curl https://static.tp-link.com/upload/software/2023/202303/20230321/Omada_SDN_Controller_v5.9.31_Linux_x64.tar.gz | tar xvz
 cd Omada*
 ./install.sh
+echo 'server{
+	listen 80;
+	server_name _;
+	return 301 https://:8043;
+}'>>/etc/nginx/conf.d/omada.conf
+systemctl enable --now nginx
