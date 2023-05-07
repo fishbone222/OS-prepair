@@ -1,4 +1,4 @@
-#almalinux 9 with at least 5gb hdd
+#almalinux 9 with at least 5gb hdd and 6gb ram
 curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/el/9/defaults.sh | bash
 dnf install git -y
 cd /tmp/
