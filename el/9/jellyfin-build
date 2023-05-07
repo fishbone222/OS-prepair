@@ -2,7 +2,7 @@
 curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/el/9/defaults.sh | bash
 dnf install git -y
 cd /tmp/
-git clone --branch 10.8.10 https://github.com/jellyfin/jellyfin.git
+git clone --branch v10.8.10 https://github.com/jellyfin/jellyfin.git
 cd jellyfin
 git submodule update --init
 dnf install -y openssl-devel libicu-devel libcurl-devel glibc-devel freetype-devel fontconfig-devel dotnet-sdk-7.0 dotnet-runtime-7.0 dpkg make rpm-build
@@ -10,7 +10,7 @@ mkdir -p ../bin/centos.amd64
 ./build.sh -t native -p centos.amd64
 
 cd /tmp/
-git clone --branch 10.8.10 https://github.com/jellyfin/jellyfin-web.git
+git clone --branch v10.8.10 https://github.com/jellyfin/jellyfin-web.git
 cd jellyfin-web
 mkdir -p ../bin/centos
 ./build.sh -t native -p centos
