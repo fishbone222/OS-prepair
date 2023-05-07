@@ -8,7 +8,7 @@ cd /tmp/
 dnf install -y jellyfin-10* jellyfin-server-10* jellyfin-web-10*
 echo 'Copy  jellyfin-10* jellyfin-server-10* jellyfin-web-10* to /tmp/'
 read
-echo '# Uncomment the commented sections after you have acquired a SSL Certificate
+echo '# Uncomment the commented sections after you have acquired a SSL Certificate'
 server {
     listen 80;
     listen [::]:80;
