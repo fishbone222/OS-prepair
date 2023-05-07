@@ -6,6 +6,8 @@ dnf install --nogpgcheck https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonf
 dnf install -y nginx
 cd /tmp/
 dnf install -y jellyfin-10* jellyfin-server-10* jellyfin-web-10*
+echo 'Copy  jellyfin-10* jellyfin-server-10* jellyfin-web-10* to /tmp/'
+read
 echo '# Uncomment the commented sections after you have acquired a SSL Certificate
 server {
     listen 80;
