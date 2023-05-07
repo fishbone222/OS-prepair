@@ -13,4 +13,5 @@ cd /tmp/
 git clone --branch release-10.8.z https://github.com/jellyfin/jellyfin-web.git
 cd jellyfin-web
 mkdir -p ../bin/centos
+npx browserslist@latest --update-db
 ./build.sh -t native -p centos
