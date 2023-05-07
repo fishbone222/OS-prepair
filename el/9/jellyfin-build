@@ -5,7 +5,7 @@ cd /tmp/
 git clone --branch release-10.8.z https://github.com/jellyfin/jellyfin.git
 cd jellyfin
 git submodule update --init
-dnf install -y openssl-devel libicu-devel libcurl-devel glibc-devel freetype-devel fontconfig-devel dotnet-sdk-7.0 dotnet-runtime-7.0 dotnet-sdk-6.0 dotnet-runtime-6.0 dpkg make rpm-build
+dnf install -y openssl-devel libicu-devel libcurl-devel glibc-devel freetype-devel fontconfig-devel dotnet-sdk-6.0 dotnet-runtime-6.0 dpkg make rpm-build
 mkdir -p ../bin/centos.amd64
 ./build.sh -t native -p centos.amd64
 
