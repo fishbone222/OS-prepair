@@ -24,3 +24,4 @@ fi
 if [ "$sql" == "mysql" ]; then
   dnf install mariadb -y
 fi
+cd /usr/src/fusionpbx-install.sh/centos && ./install.sh
