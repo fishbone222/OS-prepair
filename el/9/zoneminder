@@ -1,0 +1,5 @@
+#curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/el/9/zoneminder.sh | bash
+curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/el/9/defaults.sh | bash
+dnf install dnf-plugins-core
+dnf config-manager --set-enabled crb
+dnf install zoneminder-nginx
