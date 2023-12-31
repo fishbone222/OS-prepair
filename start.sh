@@ -9,8 +9,8 @@ case $ID in
 esac
 wget https://github.com/fishbone222/OS-prepair/archive/main.tar.gz
 tar xaf main.tar.gz
-cd /tmp/OS-prepair-main/
-bash $ID2/$RELEASE/defaults.sh
+cd /tmp/OS-prepair-main/$ID2/$RELEASE/
+bash defaults.sh
 echo "Scripts found for $ID2 Version $RELEASE:"
 pwd
 ls
