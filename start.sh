@@ -1,6 +1,4 @@
 #curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/start.sh | bash
-git clone https://github.com/fishbone222/OS-prepair/ /tmp/osprepair
-cd /tmp/osprepair/
 source /etc/os-release
 RELEASE=$(echo $VERSION_ID | cut -d '.' -f1)
 case $ID in
@@ -9,6 +7,9 @@ case $ID in
    *)
      ID2=$ID ;;
 esac
+wget https://github.com/fishbone222/OS-prepair/archive/main.tar.gz
+tar xaf main.tar.gz
+cd /tmp/OS-prepair-main/
 bash $ID2/$RELEASE/defaults.sh
 echo "Scripts found for $ID2 Version $RELEASE:"
 pwd
