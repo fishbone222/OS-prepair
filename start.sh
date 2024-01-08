@@ -7,6 +7,7 @@ case $ID in
    *)
      ID2=$ID ;;
 esac
+cd /tmp/
 wget https://github.com/fishbone222/OS-prepair/archive/main.tar.gz
 tar xaf main.tar.gz
 cd /tmp/OS-prepair-main/$ID2/$RELEASE/
