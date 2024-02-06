@@ -7,7 +7,6 @@ timedatectl set-timezone Europe/Berlin
 curl https://raw.githubusercontent.com/fishbone222/OS-prepair/main/id_rsa.pub >> ~/.ssh/authorized_keys
 systemctl enable --now sshd
 echo 'alias ls="ls -hal --color=auto"'>>~/.bashrc
-dnf config-manager --set-enabled crb
 
 dnf upgrade -y
 
