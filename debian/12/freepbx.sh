@@ -35,3 +35,5 @@ cd asterisk-chan-dongle
 ./configure --with-astversion=$astver --with-asterisk=$astdir/include
 make
 make install
+
+echo "add chan_dongle.so to Channel Driver section of /etc/asterisk/modules.conf and restart asterisk"
