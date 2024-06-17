@@ -64,6 +64,8 @@ Socket = /var/run/mysqld/mysqld.sock
 Option = 3
 EOF
 
+#freePBX
+
 cd /usr/local/src
 wget http://mirror.freepbx.org/modules/packages/freepbx/freepbx-17.0-latest-EDGE.tgz
 tar zxvf freepbx-17.0-latest-EDGE.tgz
