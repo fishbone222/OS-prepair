@@ -1,3 +1,4 @@
+#deb12 lxc unprivileged 8gb ssd
 apt update -y
 apt upgrade -y
 apt install curl lsb-release git -y
