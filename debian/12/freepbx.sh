@@ -197,4 +197,6 @@ imsi=123456789012345
 ;   you can use both imei and imsi together in this case exact match by imei and imsi required
 EOF
 
+apt install -y usb-modeswitch
+
 echo "add chan_dongle.so to Channel Driver section of /etc/asterisk/modules.conf and restart asterisk"
