@@ -200,3 +200,11 @@ EOF
 apt install -y usb-modeswitch
 
 echo "add chan_dongle.so to Channel Driver section of /etc/asterisk/modules.conf and restart asterisk"
+
+echo "@ pve-host"
+echo "chown 100000:100020 /dev/ttyUSB*"
+echo "set in  /etc/pve/lxc/xxx.conf"
+echo "lxc.cgroup2.devices.allow: c 188:* rwm"
+echo "lxc.mount.entry: /dev/ttyUSB0 dev/ttyUSB0 none bind,optional,create=file"
+echo "lxc.mount.entry: /dev/ttyUSB1 dev/ttyUSB1 none bind,optional,create=file"
+echo "lxc.mount.entry: /dev/ttyUSB2 dev/ttyUSB2 none bind,optional,create=file"
